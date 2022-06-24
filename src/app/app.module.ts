@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CartComponent } from './components/cart/cart.component';
 import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
+import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
+import { SuccessfullOrderComponent } from './components/successfull-order/successfull-order.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { OrderSummaryComponent } from './components/order-summary/order-summary.
     HeaderComponent,
     DashboardComponent,
     CartComponent,
-    OrderSummaryComponent
+    OrderSummaryComponent,
+    CustomerDetailsComponent,
+    SuccessfullOrderComponent
   ],
   imports: [
     BrowserModule,

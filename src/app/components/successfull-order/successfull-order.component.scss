@@ -1,0 +1,29 @@
+.order-image{
+    position: relative;
+    text-align: center;
+    margin-top:0px;
+  }
+
+  .order-heading{
+    position:absolute;
+    margin-top: 45px;
+    top:65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .message{
+    text-align: center;
+    margin-top: -35px;
+    font-size: 20px;
+  }
+
+  button{
+    margin-top: 5px;
+    margin-left: 600px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    color: white;
+    background-color: #a03037;
+    cursor: pointer;
+  }

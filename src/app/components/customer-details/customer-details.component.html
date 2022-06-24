@@ -1,0 +1,34 @@
+<div class="form-content">
+ <form>
+
+
+  <div class="form-head">Customers Details</div>
+
+    <div class="row-content">
+     <label for="name" class="label text">Name </label>
+     <input type="text" name="name" id="name" class="input required" placeholder="Your Name..." required >
+    </div>
+
+		<div class="row-content">
+			<label for="phoneNumber" class="label text">Phone Number </label>
+			<input type="text" name="phoneNumber" id="name" class="input required" placeholder="Phone Number..." required >
+		</div>
+
+		<div class="row-content">
+			<label for="email" class="label text">Email </label>
+			<input type="text" name="email" id="name" class="input required" placeholder="Email..." required >
+		</div>
+
+		<div class="row-content">
+			<label for="address" class="label text">Address</label>
+			<textarea name="address" id="address" placeholder="Your Address.." required></textarea>
+		</div>
+
+		<div class="buttons-contact">
+			<button  routerLink="/orderSummary" type="button" class="button button-back" id="backButton"  >Back</button>
+			<button  routerLink="/customerDetails" type="button" class="button button-reset" id="resetButton" >Reset</button>
+			<button  routerLink="/successfullOrder" type="button" class="button button-checkout" id="checkoutButton" >Checkout</button>
+		</div>
+
+ </form>
+</div>
