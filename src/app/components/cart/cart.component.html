@@ -1,1 +1,29 @@
-<p>cart works!</p>
+<div class="container">
+    <div class="card mb-3">
+      <h5 class="cart-heading">My Cart</h5>
+      <div class="row g-0" >
+        <div class="col-md-4" >
+          <img src="./assets/india.jpg" class="img-fluid rounded-start" alt="Loading...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Bare Foots</h5>
+						<!-- <p class="des">Story of Indian football team who went from barefoots to boots...</p> -->
+            <p class="card-text">by Amol Ghotale</p>
+            <p class="card-price">RS.200</p>
+            <div class="quantity-change">
+              <button type="button" class="btn  quantity-button" >-</button>
+              <input type="text" name="quantity" class="book-quantity">
+              <button type="button" class="btn  quantity-button" >+</button>
+              <a class="remove" >Remove</a>
+            </div>
+					</div>
+        </div>
+          
+      </div>
+    
+    </div>
+  <div class="place-order" >
+    <button routerLink="/orderSummary" type="button" class="placeorder-button" id="place-order">Place Order</button>
+  </div>  
+</div>
