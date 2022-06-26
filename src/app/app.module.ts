@@ -9,6 +9,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { SuccessfullOrderComponent } from './components/successfull-order/successfull-order.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { SuccessfullOrderComponent } from './components/successfull-order/succes
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

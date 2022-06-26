@@ -16,6 +16,13 @@ font-size: 18px;
 margin-top: -10px;
 }
 
+.no-books {
+  margin-top: 22px;
+  font-size: 12px;
+  margin-left: 5px;
+  
+}
+
 .card-text {
     font-size: 10px;
     margin-top: -20px;
@@ -107,13 +114,11 @@ margin-top: -10px;
   color: black;
 }
 .cart-items{
-  border-radius: 50%;
-  background-color:lightgray;
-  height: 20px;
-  width: 12px;
-  font-weight: bolder;
-  margin-top: 15px;
+  margin-top: 20px;
+  font-size: 12px ;
+  
 }
+
 .sort-ways{
   display: flex;
   margin-bottom: 20px;

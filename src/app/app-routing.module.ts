@@ -10,8 +10,8 @@ import { SuccessfullOrderComponent } from './components/successfull-order/succes
 const routes: Routes = [
   { path: "dashboard", component:DashboardComponent },
   { path: "cart", component:CartComponent },
-  { path: "orderSummary", component:OrderSummaryComponent },
   { path: "customerDetails", component:CustomerDetailsComponent },
+  { path: "orderSummary", component:OrderSummaryComponent },
   { path: "successfullOrder", component:SuccessfullOrderComponent }
 ];
 
