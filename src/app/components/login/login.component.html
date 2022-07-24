@@ -1,0 +1,24 @@
+<div class="login-form">
+	<form #myForm="ngForm">
+
+		<h1>Login</h1>
+
+		<div class="content">
+			<div class="input-field">
+				<input type="email" name="email" placeholder="Email" [(ngModel)]="login.emailId">
+			</div>
+
+			<div class="input-field">
+				<input type="password" name="password" minlength="4" placeholder="Password" [(ngModel)]="login.password">
+			</div>
+
+			<a routerLink="/forget-password">Forgot Password</a>
+		</div>
+
+		<div class="action">
+			<button type="button" (click)="register()">Register</button>
+			<button type="button" routerLink="/dashboard" (click)="signIn()">Sign In</button>
+		</div>
+
+	</form>
+</div>

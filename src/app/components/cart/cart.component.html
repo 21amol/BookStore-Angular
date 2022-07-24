@@ -1,29 +1,31 @@
 <div class="container">
-    <div class="card mb-3">
-      <h5 class="cart-heading">My Cart</h5>
-      <div class="row g-0" >
-        <div class="col-md-4" >
-          <img src="./assets/india.jpg" class="img-fluid rounded-start" alt="Loading...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Bare Foots</h5>
-						<!-- <p class="des">Story of Indian football team who went from barefoots to boots...</p> -->
-            <p class="card-text">by Amol Ghotale</p>
-            <p class="card-price">RS.200</p>
-            <div class="quantity-change">
-              <button type="button" class="btn  quantity-button" >-</button>
-              <input type="text" name="quantity" class="book-quantity">
-              <button type="button" class="btn  quantity-button" >+</button>
-              <a class="remove" >Remove</a>
-            </div>
-					</div>
-        </div>
-          
+  <div class="card mb-3">
+    <h5 class="cart-heading">My Cart</h5>
+
+			<h4 class="no-of-books">({{cart.data.length}})</h4>
+	
+    <div class="row g-0" *ngFor="let crt of cart.data"  >
+      <div class="col-md-4" >
+        <img [src]="crt.bookData.bookImg" class="img-fluid rounded-start" alt="Loading...">
       </div>
-    
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{crt.bookData.bookName}}</h5>
+          <p class="card-text">{{crt.bookData.authorName}}</p>
+          <p class="card-price">{{crt.bookData.price}}</p>
+          <div class="quantity-change">
+            <button type="button" class="btn  quantity-button" (click)=" decreaseQuantity(this.crt.cartID)"  >-</button>
+            <input type="text" name="quantity" class="book-quantity" [(ngModel)]="crt.quantity">
+            <button type="button" class="btn  quantity-button" (click)="increaseQuantity()">+</button>
+            <a class="remove" (click)="deleteCart(crt.cartId)" >Remove</a>
+          </div>
+        </div>
+      </div>
+        
     </div>
+  
+  </div>
   <div class="place-order" >
-    <button routerLink="/customerDetails" type="button" class="placeorder-button" id="place-order">Place Order</button>
-  </div>  
+    <button type="button" routerLink="/customerDetails" class="btn placeorder-button" (click)="placeOrder()">Place Order</button>
+  </div>   
 </div>

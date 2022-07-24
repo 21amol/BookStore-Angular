@@ -1,9 +1,10 @@
 <div class="container">
   
     <div class="sort-ways">
+		
         <div class="item-name">
             <h5>Books</h5>
-        </div>
+		</div>
 
 		<div class="no-books">
 			<h4 class="no-of-books">({{totalBooks}})</h4>
@@ -19,15 +20,18 @@
         </select>
     </div>
 
-    <img routerLink="/cart" src="../../assets/cart1.jpg" alt="cart image is loading..." class="cart-image">
-	<p class="cart-items">({{cartLength}})</p>
-    </div>
+    <img routerLink="/cart" src="../../assets/cart1.jpg" alt="cart image is loading..." class="cart-image" (click)="goToCart()">
+	<p class="cart-items">({{carts.data.length}})</p>
+	<button type="button" class="login-btn" routerLink="/login" >Sign out</button>
+	<img src="./assets/profilepic.jpg" alt="loading image..." class="user-img">
+    
+</div>
 
 	<div class="book-container">
 
       <div class="card card-container" *ngFor="let bookobj of book" >
         <div class="book-image">
-            <img src="../../assets/football.jpg" class="card-img-top" alt="Book Image is loading...">    
+            <img [src]="bookobj.bookImg" class="card-img-top" alt="Image is loading...">    
         </div>
 
        <div class="card-body">
@@ -36,10 +40,12 @@
         <p class="card-price">{{bookobj.price}}</p>
 
          <div class="button-container" >    
-            <button type="button" class="button" >Add to Cart</button>       
+            <button type="button" class="button" (click)="addToCart(bookobj.id)" *ngIf="bookobj.quantity!=null" >Add to Cart</button>       
          </div>
        </div>
       </div>
+
+	  
 
 	  <!--	<div class="card card-container" >
 			<div class="book-image">
@@ -155,6 +161,5 @@
 
 
 	</div>
-
 </div>
 

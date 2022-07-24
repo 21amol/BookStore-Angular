@@ -3,8 +3,8 @@
       <h4 class="order-heading">Order Placed Successfully!!!</h4>
     </div>
     <div class="message" >
-      <h6>Congrats!!!  Your order is confirmed.</h6>
-      <h6>Your order id  is #456746</h6>
+      <h6>Congrats!!!  Your order is confirmed.</h6> 
+      <h6>Your order id  is </h6><h6 *ngFor="let ordr of order.data" > #{{ordr.orderId}}</h6>
       <h6>Save the order id for tracking your order.</h6>
     </div>
 <div>

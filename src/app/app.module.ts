@@ -11,6 +11,9 @@ import { CustomerDetailsComponent } from './components/customer-details/customer
 import { SuccessfullOrderComponent } from './components/successfull-order/successfull-order.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { FormsModule } from '@angular/forms';
     CartComponent,
     OrderSummaryComponent,
     CustomerDetailsComponent,
-    SuccessfullOrderComponent
+    SuccessfullOrderComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,

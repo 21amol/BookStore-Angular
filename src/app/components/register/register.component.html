@@ -1,0 +1,55 @@
+<div class="form-content">
+	<form>
+
+		<div class="form-head">
+			<div class="form-head-text">User-details</div>
+		</div>
+
+		<div class="form-constrains">
+
+			<div class="row-content">
+				<label for="firstName" class="label text">First Name</label>
+				<br>
+				<input type="text" class="input" id="firstName" name="firstName" placeholder="Your first name.."
+					required [(ngModel)]="user.firstName">
+			</div>
+
+			<div class="row-content">
+				<label for="lastName" class="label text">Last Name</label>
+				<br>
+				<input type="text" class="input" id="lastName" name="lastName" placeholder="Your last name.."
+					[(ngModel)]="user.lastName">
+			</div>
+
+			<div class="row-content">
+				<label for="email" class="label text">Email</label>
+				<br>
+				<input type="text" class="input" email id="email" name="email" placeholder="Your Email Id..." required
+					[(ngModel)]="user.emailId">
+			</div>
+
+			<div class="row-content">
+				<label for="address" class="label text">Address</label>
+				<br>
+				<textarea name="address" id="address" placeholder="Your address.." required
+					[(ngModel)]="user.address"></textarea>
+			</div>
+
+			<div class="row-content">
+				<label for="password" class="label text">Password</label>
+				<br>
+				<input type="text" class="input" id="password" minlength="6" name="password"
+					placeholder="Your Password..." required [(ngModel)]="user.password">
+			</div>
+
+			<div class="buttons-contact">
+				<button type="button" class="button button-cancel" id="cancelButton">Cancel</button>
+				<button type="button" class="button button-submit" id="submitButton"
+					routerLink="/login" (click) = "onSubmit()" >Submit</button>
+				<button type="reset" class="button button-reset" id="resetButton">Reset</button>
+			</div>
+
+		</div>
+
+	</form>
+</div>

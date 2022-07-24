@@ -30,6 +30,10 @@ sortByDescending() {
   return this.http.get("http://localhost:8080/book/sortDesc")
 }
 
+getBookRecordById(Id:any) {
+  return this.http.get("http://localhost:8080/book/get/" + Id)
+}
+
 
 
 

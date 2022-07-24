@@ -7,28 +7,28 @@
 
     <div class="row-content">
      <label for="name" class="label text">Name </label>
-     <input type="text" name="name" id="name" class="input required" placeholder="Your Name..." required >
+     <input type="text" name="name" id="name" #name="ngModel" [(ngModel)]="cust.name"  class="input required" placeholder="Your Name..." required >
     </div>
 
 		<div class="row-content">
 			<label for="phoneNumber" class="label text">Phone Number </label>
-			<input type="text" name="phoneNumber" id="name" class="input required" placeholder="Phone Number..." required >
+			<input type="text" name="phoneNumber" id="name" #number="ngModel" [(ngModel)]="cust.phoneNumber" class="input required" placeholder="Phone Number..." required >
 		</div>
 
 		<div class="row-content">
 			<label for="email" class="label text">Email </label>
-			<input type="text" name="email" id="name" class="input required" placeholder="Email..." required >
+			<input type="text" name="email" id="name" #mail="ngModel" [(ngModel)]="cust.email"  class="input required" placeholder="Email..." required >
 		</div>
 
 		<div class="row-content">
 			<label for="address" class="label text">Address</label>
-			<textarea name="address" id="address" placeholder="Your Address.." required></textarea>
+			<textarea name="address" id="address" #address="ngModel" [(ngModel)]="cust.address" placeholder="Your Address.." required></textarea>
 		</div>
 
 		<div class="buttons-contact">
 			<button  routerLink="/cart" type="button" class="button button-back" id="backButton"  >Back</button>
 			<button  routerLink="/customerDetails" type="button" class="button button-reset" id="resetButton" >Reset</button>
-			<button  routerLink="/orderSummary" type="button" class="button button-checkout" id="checkoutButton" >Continue</button>
+			<button  routerLink="/orderSummary" type="button" class="button button-checkout" id="checkoutButton" (click)="continue()" >Continue</button>
 		</div>
 
  </form>
